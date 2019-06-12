@@ -1,3 +1,7 @@
+# As two Players,
+# So we can play a personalised game of Battle,
+# We want to Start a fight by entering our Names and seeing them
+
 feature "asks for player names" do
   scenario "fill out Player 1 name form" do
     visit "/"

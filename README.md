@@ -13,6 +13,7 @@ As two Players,
 So we can play a personalised game of Battle,
 We want to Start a fight by entering our Names and seeing them
 ```
+12/06/19 - created this page using a form on root index, which posts the names as params to /names
 
 ### Version 2 - Player profile build
 

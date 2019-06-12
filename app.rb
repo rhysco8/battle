@@ -3,7 +3,7 @@ require 'sinatra/base'
 class BattleApp < Sinatra::Base
 
   get '/' do
-    "testing infrastructure working!"
+    erb :index
   end
 
   run! if app_file == $0

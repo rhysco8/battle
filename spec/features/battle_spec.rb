@@ -1,10 +1,3 @@
-feature "Loads homepage" do
-    scenario "visit homepage and see 'testing infrastructure working!'" do
-        visit("/")
-        expect(page).to have_content('testing infrastructure working!')
-    end
-end
-
 feature "asks for player names" do
   scenario "fill out Player 1 name form" do
     visit "/"

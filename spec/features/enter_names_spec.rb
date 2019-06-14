@@ -9,6 +9,7 @@ feature "Enter player names" do
     fill_in :player_2_name, with: 'Godzilla'
 
     click_button('Submit')
-    expect(page).to have_content('Ms Jackson vs. Godzilla')
+    expect(page).to have_content('Ms Jackson')
+    expect(page).to have_content('vs. Godzilla')
   end
 end

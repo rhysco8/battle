@@ -13,6 +13,7 @@ feature "Display Player Hit Points" do
     fill_in :player_2_name, with: 'Godzilla'
 
     click_button('Submit')
-    expect(page).to have_content('HP: 100')
+    expect(page).to have_content('HP: 100', :count => 2)
   end
+
 end

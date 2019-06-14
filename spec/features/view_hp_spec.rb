@@ -8,11 +8,8 @@
 
 feature "Display Player Hit Points" do
   scenario "display Player 2's HP" do
-    visit "/"
-    fill_in :player_1_name, with: 'Ms Jackson'
-    fill_in :player_2_name, with: 'Godzilla'
+    sign_in_and_play
 
-    click_button('Submit')
     expect(page).to have_content('HP: 100', :count => 2)
   end
 

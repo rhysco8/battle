@@ -4,11 +4,8 @@
 
 feature "Enter player names" do
   scenario "fill out player name forms" do
-    visit "/"
-    fill_in :player_1_name, with: 'Ms Jackson'
-    fill_in :player_2_name, with: 'Godzilla'
-
-    click_button('Submit')
+    sign_in_and_play
+    
     expect(page).to have_content('Ms Jackson')
     expect(page).to have_content('vs. Godzilla')
   end

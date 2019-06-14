@@ -8,6 +8,10 @@ class Player
       @hp = STARTING_HP
     end
 
+    def attack(target)
+      target.damage
+    end
+
     def damage
       @hp -= 10
     end

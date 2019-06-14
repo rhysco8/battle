@@ -2,6 +2,7 @@ require 'player'
 
 describe Player do
     subject { described_class.new("Ms Jackson") }
+    let(:other_player) { described_class.new("Godzilla") }
     it "should return its name" do
         expect(subject.name).to eq("Ms Jackson")
     end
@@ -11,9 +12,9 @@ describe Player do
       end
     end
 
-    describe '#damage' do
-      it "should reduce player's hp by 10" do
-        expect { subject.damage }.to change { subject.hp }.by(-10)
+    describe '#attack' do
+      it "should reduce other_player's hp by 10" do
+        expect { subject.attack(other_player) }.to change { other_player.hp }.by(-10)
       end
     end
 end

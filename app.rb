@@ -21,5 +21,9 @@ class BattleApp < Sinatra::Base
     erb :play
   end
 
+  get '/attack-confirmation' do
+    erb :suplex
+  end
+
   run! if app_file == $0
 end

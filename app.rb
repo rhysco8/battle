@@ -1,7 +1,7 @@
 require 'sinatra/base'
 
 class BattleApp < Sinatra::Base
-
+  STARTING_HP = 100
   enable :sessions
 
   get '/' do
@@ -9,8 +9,6 @@ class BattleApp < Sinatra::Base
   end
 
   post '/names' do
-    p params
-    p session
     session[:player_1_name] = params[:player_1_name]
     session[:player_2_name] = params[:player_2_name]
     redirect to('/play')
@@ -19,6 +17,7 @@ class BattleApp < Sinatra::Base
   get '/play' do
     @player_1_name = session[:player_1_name]
     @player_2_name = session[:player_2_name]
+
     erb :play
   end
 
